@@ -76,6 +76,7 @@ i.fa-solid {
 
     background-color: var(--cor_secundario);
     border-radius: 0px 15px 15px 15px;
+    z-index: 2;
 }
 
 
@@ -109,7 +110,7 @@ i.fa-solid {
 }
 
 .texto_banner h1 {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--cor_texto_branco);
     margin-bottom: 20px;
 }
@@ -118,6 +119,7 @@ i.fa-solid {
     font-size: 15px;
     color: var(--cor_texto_branco);
     margin-bottom: 25px;
+    line-height: 1.5;
 }
 
 .hero-content a {
@@ -127,4 +129,9 @@ i.fa-solid {
     background-color: var(--marrom_caramelo);
     border-radius: 5px;
     font-size: 14px;
+}
+
+.hero-content a:hover {
+    background-color: var(--cor_secundario);
+    transition: 0.3s;
 }
