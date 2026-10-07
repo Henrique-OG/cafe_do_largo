@@ -16,6 +16,16 @@ body {
     margin: 0;
 }
 
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header {
     background-color: var(--cor_secundario);
     padding: 5px 0px;
@@ -34,7 +44,7 @@ header .logo img {
 
 .menu_header {
     display: block;
-    width: 50%;
+    width: 80%;
     text-align: left;
     padding-left: 15px;
 }
@@ -74,4 +84,47 @@ i.fa-solid {
     color: var(--cor_texto_branco);
     font-size: 17px;
     margin-bottom: 10px;
+}
+
+.hero-content {
+    position: relative;
+    overflow: hidden;
+    max-height: 600px;
+}
+
+.hero-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 600px;
+}
+
+.texto_banner {
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    width: 70%;
+    max-width: 506px;
+}
+
+.texto_banner h1 {
+    font-size: 18px;
+    color: var(--cor_texto_branco);
+    margin-bottom: 20px;
+}
+
+.texto_banner p {
+    font-size: 15px;
+    color: var(--cor_texto_branco);
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.hero-content a {
+    color: var(--cor_texto_branco);
+    text-decoration: none;
+    padding: 5px 20px;
+    background-color: var(--marrom_caramelo);
+    border-radius: 5px;
+    font-size: 14px;
 }
