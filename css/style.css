@@ -59,12 +59,12 @@ i.fa-solid {
 .nav_mobile {
     position: absolute;
     top: 50px;
+    padding: 15px;
 
     display: flex;
     flex-direction: column;
 
     background-color: var(--cor_secundario);
-    padding: 15px 15px ;
     border-radius: 0px 15px 15px 15px;
 }
 
@@ -72,6 +72,6 @@ i.fa-solid {
 .nav_mobile a {
     text-decoration: none;
     color: var(--cor_texto_branco);
-    font-size: 13px;
+    font-size: 17px;
     margin-bottom: 10px;
 }
