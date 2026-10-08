@@ -216,15 +216,17 @@ i.fa-solid {
 }
 
 .sobre_nos_img {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .sobre_nos_img img {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .sobre_nos_texto {
