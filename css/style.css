@@ -97,6 +97,7 @@ i.fa-solid {
     height: 400px;
     max-height: none;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .hero-content img {
@@ -143,11 +144,11 @@ i.fa-solid {
     transition: 0.3s;
 }
 
-.pratos_em_destaque, .sobre_nos, .motivos_para_escolher , .galeria, .contato {
+.pratos_em_destaque, .sobre_nos, .motivos_para_escolher , .galeria {
     padding: 5px;
 }
 
-.pratos_em_destaque h2, .sobre_nos h2, .motivos_para_escolher h2, .galeria h2, .contato h2 {
+.pratos_em_destaque h2, .sobre_nos h2, .motivos_para_escolher h2, .galeria h2 {
     color: var(--cor_texto_preto);
     margin-bottom: 7px;
 }
@@ -264,12 +265,12 @@ i.fa-solid {
 .divisao_motivo {
     display: flex;
     gap: 10px;
-    align-items: cwnter;
+    align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
 
-.motivos_para_escolher h2 , .galeria h2, .contato h2 {
+.motivos_para_escolher h2 , .galeria h2 {
     text-align: center;
 }
 
