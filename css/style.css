@@ -143,11 +143,11 @@ i.fa-solid {
     transition: 0.3s;
 }
 
-.pratos_em_destaque, .sobre_nos, .motivos_para_escolher {
+.pratos_em_destaque, .sobre_nos, .motivos_para_escolher , .galeria, .contato {
     padding: 5px;
 }
 
-.pratos_em_destaque h2, .sobre_nos h2, .motivos_para_escolher h2 {
+.pratos_em_destaque h2, .sobre_nos h2, .motivos_para_escolher h2, .galeria h2, .contato h2 {
     color: var(--cor_texto_preto);
     margin-bottom: 7px;
 }
@@ -189,12 +189,12 @@ i.fa-solid {
     margin-bottom: 10px;
 }
 
-.botao_ver_pratos, .botao_sobre_nos {
+.botao_ver_pratos, .botao_sobre_nos, .botao_ver_galeria {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.botao_ver_pratos a, .botao_sobre_nos a {
+.botao_ver_pratos a, .botao_sobre_nos a, .botao_ver_galeria a {
     text-decoration: none;
     color: var(--cor_texto_branco);
     padding: 5px 20%;
@@ -267,4 +267,21 @@ i.fa-solid {
     align-items: cwnter;
     justify-content: space-between;
     padding: 10px;
+}
+
+.motivos_para_escolher h2 , .galeria h2, .contato h2 {
+    text-align: center;
+}
+
+.galeria_imagens {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.galeria_imagens img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
 }
