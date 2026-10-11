@@ -10,24 +10,33 @@
         content="Café do Largo em Osasco. Confira nossos horários, pratos e nossas hitória.">
     <title>Cafe do Largo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style_pc.css">
 </head>
 <body>
     <header>
         <div class="conteiner">
             <div class="header-container">
-                <div class="menu_header">
-                    <details class="menu-mobile">
-                        <summary>
-                            <i class="fa-solid fa-bars"></i>
-                        </summary>
+                <div class="mobile_menu">
+                    <div class="menu_header">
+                        <details class="menu-mobile">
+                            <summary>
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
 
-                        <nav class="nav_mobile">
-                            <a href="index.html">Home</a>
-                            <a href="#">Cardápio</a>
-                            <a href="#">Sobre nós</a>
-                            <a href="#">Galeria</a>
-                        </nav>
-                    </details>
+                            <nav class="nav_mobile">
+                                <a href="index.html">Home</a>
+                                <a href="#">Cardápio</a>
+                                <a href="#">Sobre nós</a>
+                                <a href="#">Galeria</a>
+                            </nav>
+                        </details>
+                    </div>
+                </div>
+                <div class="pc_menu">
+                    <a href="index.html">Home</a>
+                    <a href="#">Cardápio</a>
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Galeria</a>
                 </div>
                 <div class="logo">
                     <img src="imagens/imagem_logo.png" alt="Logo do Cafe do Largo">
@@ -39,7 +48,13 @@
     <section class="hero">
         <div class="conteiner">
             <div class="hero-content">
-                <img src="imagens/banner_img_cell.png" alt="Foto de um café com leite e um croissant em uma mesa de madeira">
+                <picture>
+                    <source media="(min-width: 500px)" srcset="imagens/baner_img_pc.png" alt="Foto de um café com leite e um croissant em uma mesa de madeira">
+
+                    <img src="imagens/banner_img_cell.png" alt="Foto de um café com leite e um croissant em uma mesa de madeira">
+                </picture>
+
+
                 <div class="texto_banner">
                     <h1>Bem-vindo ao Café do Largo</h1>
                     <p>O melhor café da cidade, com um ambiente acolhedor e deliciosas opções de cardápio.</p>

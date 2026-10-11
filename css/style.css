@@ -55,6 +55,10 @@ header .logo img {
     padding-left: 15px;
 }
 
+.pc_menu {
+    display: none;
+}
+
 .menu-mobile {
     position: relative;
 }

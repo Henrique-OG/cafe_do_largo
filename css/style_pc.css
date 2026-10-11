@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+:root {
+    --cor_fundo: #F5EBDD;
+    --cor_texto_preto: #000000; 
+    --cor_texto_branco: #FFFDF8;
+    --cor_secundario: #667052;
+    --marrom_caramelo: #B87945;
+}
+
+@media (min-width: 500px) {
+
+    .mobile_menu {
+        display: none;
+    }
+
+    .pc_menu {
+        display: flex;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .pc_menu a{
+        color: var(--cor_fundo);
+        text-decoration: none;
+    }
+
+    .texto_banner {
+        position: absolute;
+        text-align: left;
+        top: 25%;
+        left: 20px;
+        transform: translateX(0);
+        width: 60%;
+    }
+
+    .texto_banner {
+        width: 300px;
+    }
+
+    .hero-content source {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+}
