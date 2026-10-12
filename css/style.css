@@ -177,6 +177,10 @@ i.fa-solid {
     height: 125px;
 }
 
+.img_prato_destaque {
+    height: 125px;
+}
+
 .texto_prato_destaque {
     margin: 5px 8px;
     text-align: center;
