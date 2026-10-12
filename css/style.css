@@ -295,3 +295,12 @@ i.fa-solid {
     object-position: center;
     margin-bottom: 20px;
 }
+
+footer {
+    text-align: center;
+    color: var(--cor_texto_preto);
+}
+
+footer p {
+    color: var(--cor_texto_preto);
+}
