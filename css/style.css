@@ -138,13 +138,13 @@ i.fa-solid {
     color: var(--cor_texto_branco);
     text-decoration: none;
     padding: 5px 20px;
-    background-color: var(--marrom_caramelo);
+    background-color: var(--cor_secundario);
     border-radius: 5px;
     font-size: 14px;
 }
 
 .hero-content a:hover {
-    background-color: var(--cor_secundario);
+    background-color: var(--marrom_caramelo);
     transition: 0.3s;
 }
 
@@ -219,6 +219,7 @@ i.fa-solid {
 
 .linha_separar_secao {
     width: 90%;
+    max-width: 1200px;
     height: 4px;
     background-color: var(--cor_secundario);
     margin: 20px auto;

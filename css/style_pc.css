@@ -70,4 +70,51 @@
         object-fit: cover;
         object-position: center;
     }
+
+    .sobre_nos_img {
+        width: 60%;
+        max-width: 500px;
+    }
+
+    .conteudo_sobre_nos {
+        display: flex;
+    }
+
+    .sobre_nos_texto {
+        width: 40%;
+        text-align: left;
+        margin: auto 0;
+    }
+
+    .sobre_nos_texto p {
+        line-height: 1.5;
+        font-size: 18px;
+        max-width: 350px;
+    }
+
+    .botao_sobre_nos {
+        margin: 30px 0;
+        text-align: left;
+    }
+
+    .botao_sobre_nos a {
+        padding: 5px 15px;
+    }
+
+    .motivos {
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    .galeria_imagens {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .botao_ver_galeria a {
+        padding: 5px 20%;
+    }
 }
