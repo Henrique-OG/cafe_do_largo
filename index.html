@@ -7,7 +7,7 @@
     <link rel="icon" href="imagens/imagem_logo.png" type="image/png">
     <meta 
         name="description" 
-        content="Café do Largo em Osasco. Confira nossos horários, pratos e nossas hitória.">
+        content="Conheça o Café do Largo: cappuccino, croissant, sanduíche e bolo de chocolate em um ambiente acolhedor. Veja o cardápio e nossa história.">
     <title>Cafe do Largo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="css/style_pc.css">
@@ -19,11 +19,11 @@
                 <div class="mobile_menu">
                     <div class="menu_header">
                         <details class="menu-mobile">
-                            <summary>
-                                <i class="fa-solid fa-bars"></i>
+                            <summary aria-label="Abrir menu">
+                                <i class="fa-solid fa-bars" arial-hidden="true"></i>
                             </summary>
 
-                            <nav class="nav_mobile">
+                            <nav class="nav_mobile" aria-label="Menu Principal">
                                 <a href="index.html">Home</a>
                                 <a href="#">Cardápio</a>
                                 <a href="#">Sobre nós</a>
@@ -32,169 +32,173 @@
                         </details>
                     </div>
                 </div>
-                <div class="pc_menu">
+                <div class="pc_menu" aria-label="Menu principal">
                     <a href="index.html">Home</a>
                     <a href="#">Cardápio</a>
                     <a href="#">Sobre nós</a>
                     <a href="#">Galeria</a>
                 </div>
                 <div class="logo">
-                    <img src="imagens/imagem_logo.png" alt="Logo do Cafe do Largo">
+                    <img src="imagens/imagem_logo.png" alt="Café do Largo – página inicial">
                 </div> 
             </div>
         </div>
     </header>
     
-    <section class="hero">
-        <div class="conteiner">
-            <div class="hero-content">
-                <picture>
-                    <source media="(min-width: 500px)" srcset="imagens/baner_img_pc.png" alt="Foto de um café com leite e um croissant em uma mesa de madeira">
+    <main>
 
-                    <img src="imagens/banner_img_cell.png" alt="Foto de um café com leite e um croissant em uma mesa de madeira">
-                </picture>
+        <section class="hero">
+            <div class="conteiner">
+                <div class="hero-content">
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="imagens/baner_img_pc.png">
+
+                        <img src="imagens/banner_img_cell.png" alt="Xícara de café com desenho de coração na espuma sobre uma mesa de madeira">
+                    </picture>
 
 
-                <div class="texto_banner">
-                    <h1>Bem-vindo ao Café do Largo</h1>
-                    <p>O melhor café da cidade, com um ambiente acolhedor e deliciosas opções de cardápio.</p>
-                    <a href="#" class="btn">Confira nosso cardápio</a>
+                    <div class="texto_banner">
+                        <h1>Bem-vindo ao Café do Largo</h1>
+                        <p>O melhor café da cidade, com um ambiente acolhedor e deliciosas opções de cardápio.</p>
+                        <a href="#" class="btn">Confira nosso cardápio</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="pratos_em_destaque">
+            <div class="conteiner">
+                <h2>Pratos em Destaque</h2>
+                <div class="linha_titulo">
+                </div>
+                <div class="pratos_destaque">
+                    <div class="divisao_pratos_pc">
+                        <div class="prato_destaque">
+                            
+                            <div class="img_prato_destaque">
+                                <img src="imagens/cappuccino_img.png" alt="Cappuccino da Casa">
+                            </div>
+                            <div class="texto_prato_destaque">
+                                <h3>Cappuccino da Casa</h3>
+                                <p>espresso, leite vaporizado e espuma cremosa </p>
+                                <p class="preco">R$ 12,90</p>
+                            </div>
+                        </div>
+
+                        <div class="prato_destaque">
+                            <div class="img_prato_destaque">
+                                <img src="imagens/croissant_img.png" alt="Croassant Aetesanal em uma mesa de madeira">
+                            </div>
+                            <div class="texto_prato_destaque">
+                                <h3>Croissant Artesanal</h3>
+                                <p>croissant amanteigado, assado diariamente.</p>
+                                <p class="preco">R$ 14,90</p>
+                            </div>              
+                        </div>
+                    </div>
+
+                    <div class="divisao_pratos_pc">
+                        <div class="prato_destaque">
+                            <div class="img_prato_destaque">
+                                <img src="imagens/sanduiche_img.png" alt="Sanduíche do Largo">
+                            </div>
+                            <div class="texto_prato_destaque">
+                                <h3>Sanduíche do Largo</h3>
+                                <p>pão artesanal, queijo, presunto, tomate e folhas</p>
+                                <p class="preco">R$ 24,90</p>
+                            </div>
+                        </div>
+
+                        <div class="prato_destaque">   
+                            <div class="img_prato_destaque">
+                                <img src="imagens/bolo_chocolate_img.png" alt="Bolo de chocolate em uma mesa de madeira">
+                            </div>
+                            <div class="texto_prato_destaque">
+                                <h3> Bolo de Chocolate</h3>
+                                <p>bolo de chocolate com cobertura cremosa </p>
+                                <p class="preco">R$ 16,90</p>
+                            </div>    
+                        </div>
+                    </div>
                 </div>
                 
-            </div>
-        </div>
-    </section>
-
-    <section class="pratos_em_destaque">
-        <div class="conteiner">
-            <h2>Pratos em Destaque</h2>
-            <div class="linha_titulo">
-            </div>
-            <div class="pratos_destaque">
-                <div class="divisao_pratos_pc">
-                    <div class="prato_destaque">
-                        
-                        <div class="img_prato_destaque">
-                            <img src="imagens/cappuccino_img.png" alt="Imagem do Cappuccino da Casa">
-                        </div>
-                        <div class="texto_prato_destaque">
-                            <h3>Cappuccino da Casa</h3>
-                            <p>espresso, leite vaporizado e espuma cremosa </p>
-                            <p class="preco">R$ 12,90</p>
-                        </div>
-                    </div>
-
-                    <div class="prato_destaque">
-                        <div class="img_prato_destaque">
-                            <img src="imagens/croissant_img.png" alt="foto de um Croassant Aetesanal em uma mesa de madeira">
-                        </div>
-                        <div class="texto_prato_destaque">
-                            <h3>Croissant Artesanal</h3>
-                            <p>croissant amanteigado, assado diariamente.</p>
-                            <p class="preco">R$ 14,90</p>
-                        </div>              
-                    </div>
-                </div>
-
-                <div class="divisao_pratos_pc">
-                    <div class="prato_destaque">
-                        <div class="img_prato_destaque">
-                            <img src="imagens/sanduíche_img.png" alt="Imagem do Sanduíche do Largo">
-                        </div>
-                        <div class="texto_prato_destaque">
-                            <h3>Sanduíche do Largo</h3>
-                            <p>pão artesanal, queijo, presunto, tomate e folhas</p>
-                            <p class="preco">R$ 24,90</p>
-                        </div>
-                    </div>
-
-                    <div class="prato_destaque">   
-                        <div class="img_prato_destaque">
-                            <img src="imagens/bobo_chocolate_img.png" alt="Imagem de um bolo de chocolate em uma mesa de madeira">
-                        </div>
-                        <div class="texto_prato_destaque">
-                            <h3> Bolo de Chocolate</h3>
-                            <p>bolo de chocolate com cobertura cremosa </p>
-                            <p class="preco">R$ 16,90</p>
-                        </div>    
-                    </div>
+                <div class="botao_ver_pratos">
+                    <a href="#">Ver mais pratos</a>
                 </div>
             </div>
+
+            <div class="linha_separar_secao"></div>
+        </section>
+
+        <section class="sobre_nos">
+            <div class="conteiner">
             
-            <div class="botao_ver_pratos">
-                <a href="#">Ver mais pratos</a>
-            </div>
-        </div>
+                <h2>Sobre Nós</h2>
+                <div class="linha_titulo"></div>
+                <div class="conteudo_sobre_nos">
+                    <div class="sobre_nos_img">
+                        <img src="imagens/imagem_sobre_nos.png" alt="Fachada do Café do Largo, com letreiro escuro e lousa na calçada">
+                    </div>
 
-        <div class="linha_separar_secao"></div>
-    </section>
+                    <div class="sobre_nos_texto">
+                        <p>   No Café do Largo, acreditamos que um bom café pode transformar o dia. Criamos um espaço acolhedor para reunir pessoas, compartilhar sabores e aproveitar bons momentos, seja para começar a manhã, fazer uma pausa no trabalho ou simplesmente conversar</p>
+                    
 
-    <section class="sobre_nos">
-        <div class="conteiner">
-           
-            <h2>Sobre Nós</h2>
-            <div class="linha_titulo"></div>
-            <div class="conteudo_sobre_nos">
-                <div class="sobre_nos_img">
-                    <img src="imagens/imagem_sobre_nos.png" alt="Imagem do exterior do Café do Largo">
-                </div>
-
-                <div class="sobre_nos_texto">
-                    <p>   No Café do Largo, acreditamos que um bom café pode transformar o dia. Criamos um espaço acolhedor para reunir pessoas, compartilhar sabores e aproveitar bons momentos, seja para começar a manhã, fazer uma pausa no trabalho ou simplesmente conversar</p>
-                
-
-                    <div class="botao_sobre_nos">
-                        <a href="#">Conheça nossa história</a>
+                        <div class="botao_sobre_nos">
+                            <a href="#">Conheça nossa história</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-       
-        <div class="linha_separar_secao"></div>
-    </section>
+        
+            <div class="linha_separar_secao"></div>
+        </section>
 
-    <section class="motivos_para_escolher">
-        <div class="conteiner">
-            <h2>Por que escolher o Café do Largo ?</h2>
-            <div class="motivos">
-                <div class="motivo">
-                    <i class="fa-solid fa-mug-hot"></i>
-                    <p>cafés especiais</p>
+        <section class="motivos_para_escolher">
+            <div class="conteiner">
+                <h2>Por que escolher o Café do Largo ?</h2>
+                <div class="motivos">
+                    <div class="motivo">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <p>cafés especiais</p>
+                    </div>
+                    <div class="motivo">
+                        <i class="fa-solid fa-burger"></i>
+                        <p>Produtos artesanais</p>
+                    </div>
+                    <div class="motivo">
+                        <i class="fa-solid fa-couch"></i>
+                        <p>ambiente agradável</p>
+                    </div>
+                    <div class="motivo">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>Atendimento próximo</p>
+                    </div>
                 </div>
-                <div class="motivo">
-                    <i class="fa-solid fa-burger"></i>
-                    <p>Produtos artesanais</p>
-                </div>
-                <div class="motivo">
-                    <i class="fa-solid fa-couch"></i>
-                    <p>ambiente agradável</p>
-                </div>
-                <div class="motivo">
-                    <i class="fa-solid fa-heart"></i>
-                    <p>Atendimento próximo</p>
-                </div>
-            </div>
-        </div>
-        <div class="linha_separar_secao"></div>
-    </section>
-
-    <section class="galeria">
-        <div class="conteiner">
-            <h2>Galeria</h2>
-            <div class="galeria_imagens">
-                <img src="imagens/foto_do_sofa.png" alt="Imagem do interior do Café do Largo, foto do sofá e da mesa de madeira">
-                <img src="imagens/foto_salgados.png" alt="Imagem de alguns salgados do Café do Largo, como coxinha e empada">
-                <img src="imagens/foto_mesas.png" alt="Imagem de algumas mesas">
-            </div>
-            <div class="botao_ver_galeria">
-                <a href="#">Ver mais fotos</a>
             </div>
             <div class="linha_separar_secao"></div>
-        </div>
-    </section>
+        </section>
+
+        <section class="galeria">
+            <div class="conteiner">
+                <h2>Galeria</h2>
+                <div class="galeria_imagens">
+                    <img src="imagens/foto_do_sofa.png" alt="Imagem do interior do Café do Largo, foto do sofá e da mesa de madeira">
+                    <img src="imagens/foto_salgados.png" alt="Vitrine com salgados e doces e um quadro de cardápio ao fundo">
+                    <img src="imagens/foto_mesas.png" alt="Cantinho do café com sofá de couro, mesa de madeira e quadros na parede">
+                </div>
+                <div class="botao_ver_galeria">
+                    <a href="#">Ver mais fotos</a>
+                </div>
+                <div class="linha_separar_secao"></div>
+            </div>
+        </section>
+    
+    </main>
 
     <footer>
-        <p>© 2026 Café do Largo. Todos os direitos reservados.</p>
+        <p>© 2026 Café do Largo · Projeto fictício de portfólio.</p>
     </footer>
 </body>
 </html>
