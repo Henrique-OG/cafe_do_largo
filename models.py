@@ -6,6 +6,7 @@ class Pratos(db.Model):
     sobre_prato = db.Column(db.Text())
     valor = db.Column(db.Numeric(8, 2), nullable=False)
     imagem = db.Column(db.String(255))
+    classificacao = db.Column(db.String(30), nullable=False)
     disponibilidade = db.Column(db.Boolean, default=True)
 
 class Adm(db.Model):

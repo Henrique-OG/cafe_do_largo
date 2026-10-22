@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public_css/style.css') }}">
+    <link rel="icon" href="../../static/imagens/imagem_logo.png" type="image/png">
+    <meta 
+        name="description" 
+        content="Conheça o Café do Largo: cappuccino, croissant, sanduíche e bolo de chocolate em um ambiente acolhedor. Veja o cardápio e nossa história.">
+    <title>Cafe do Largo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public_css/style_pc.css') }}">
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <div class="header-container">
+                <div class="mobile_menu">
+                    <div class="menu_header">
+                        <details class="menu-mobile">
+                            <summary aria-label="Abrir menu">
+                                <i class="fa-solid fa-bars" arial-hidden="true"></i>
+                            </summary>
+
+                            <nav class="nav_mobile" aria-label="Menu Principal">
+                                <a href="{{url_for('public.apresentacao')}}">Home</a>
+                                <a href="{{url_for('public.cardapio')}}">Cardápio</a>
+                                <a href="#">Sobre nós</a>
+                                <a href="#">Galeria</a>
+                            </nav>
+                        </details>
+                    </div>
+                </div>
+                <div class="pc_menu" aria-label="Menu principal">
+                    <a href="{{url_for('public.apresentacao')}}">Home</a>
+                    <a href="{{url_for('public.cardapio')}}">Cardápio</a>
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Galeria</a>
+                </div>
+                <div class="logo">
+                    <img src="../static/imagens/imagem_logo.png" alt="Café do Largo – página inicial">
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pratos_cardapio">
+            <div class="conteiner">
+                <div class="texto_cardapio">
+                    <h1>Nosso cardápio</h1>
+                    <div class="linha_titulo"></div>
+                </div>
+                <div class="filtro">
+                    <a class="filtro_prato" href="{{url_for('public.cardapio', filtro='todos')}}">Todas</a>
+                    <a class="filtro_prato" href="{{url_for('public.cardapio', filtro='doces')}}">Doces</a>
+                    <a class="filtro_prato" href="{{url_for('public.cardapio', filtro='salgados')}}">Saldados</a>
+                    <a class="filtro_prato" href="{{url_for('public.cardapio', filtro='bebidas')}}">Bebidas</a>
+                </div>
+                <div class="cardapio_cards">
+                    {% for prato in pratos %}
+                        <div class="card_prato">
+                            <div class="imagem_prato">
+                                {% if prato.imagem %}
+                                    <img src="{{ url_for('static', filename='imagens/pratos/' + prato.imagem) }}"
+                                    alt="{{prato.nome}}">
+                                {% endif %}
+                            </div>
+                            <div class="texto_card_prato">
+                                <h3>{{prato.nome}}</h3>
+                                <p>{{ (prato.sobre_prato or '')|truncate(40) }}</p>
+                                <p class="valor_prato">R$ {{ '%.2f'|format(prato.valor) }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -117,4 +117,29 @@
     .botao_ver_galeria a {
         padding: 5px 20%;
     }
+
+    .cardapio_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .card_prato {
+        width: 95%;
+    }
+
+    .card_prato:hover {
+        width: 97%;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .filtro {
+        width: 100%;
+    }
+
+    .texto_cardapio {
+        width: 100%;
+    }
 }

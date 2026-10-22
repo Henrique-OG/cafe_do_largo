@@ -7,3 +7,4 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///cafe.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    MAX_CONTENT_LENGTH = 2 * 1024 * 1024   # 2 MB

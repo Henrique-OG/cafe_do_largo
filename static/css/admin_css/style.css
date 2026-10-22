@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+:root {
+    --cor_fundo: #F5EBDD;
+    --cor_texto_preto: #000000; 
+    --cor_texto_branco: #FFFDF8;
+    --cor_secundario: #667052;
+    --marrom_caramelo: #B87945;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor_texto_branco);
+    background-color: var(--cor_fundo);
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    color: var(--cor_texto_preto);
+}
+
+h1 {
+    color: var(--cor_texto_preto);
+    margin-bottom: 0px;
+}
+
+.linha {
+    width: 20%;
+    background-color: var(--cor_secundario);
+    height: 3px;
+    margin: 10px 0;
+}
+
+header {
+    background-color: var(--cor_secundario);
+    padding: 5px;
+}
+
+.header_conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu_header {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+    width: 80%;
+}
+
+.menu-mobile {
+    position: relative;
+}
+
+.menu-mobile summary {
+    list-style: none;
+}
+
+.menu-mobile summary::-webkit-details-marker {
+    display: none;
+}
+
+i.fa-solid {
+    color: var(--cor_fundo);
+    font-size: 24px;
+}
+
+.nav_mobile {
+    position: absolute;
+    top: 50px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--cor_secundario);
+    border-radius: 0px 15px 15px 15px;
+    z-index: 2;
+}
+
+.nav_mobile a {
+    color: var(--cor_fundo);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.imagem_header {
+    display: block;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.formulario {
+    margin: 40px auto;
+    padding: 10px;
+    width: 80%;
+    border: solid 1px var(--cor_secundario);
+}
+
+label {
+    display: block;
+    margin: 7px 0;
+    color: var(--cor_texto_preto);
+    font-size: 15px;
+}
+
+input {
+    width: 90%;
+    background-color: var(--cor_fundo);
+    border: solid 1px var(--cor_texto_preto);
+    border-radius: 7px;
+    padding: 5px;
+}
+
+textarea {
+    width: 90%;
+    height: 90px; 
+    resize: none; 
+    background-color: var(--cor_fundo);
+    border: solid 1px var(--cor_texto_preto);
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.botao_enviar {
+    margin-top: 20px;
+    background-color: var(--cor_secundario);
+    color: var(--cor_fundo);
+}
+
+.colocar_imagem_forms {
+    color: var(--cor_texto_preto);
+}
+
+.classificacao_prato_escolha {
+    background-color: var(--cor_fundo);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+
+
+
+

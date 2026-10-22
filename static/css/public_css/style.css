@@ -83,6 +83,7 @@ i.fa-solid {
 
     display: flex;
     flex-direction: column;
+    width: 110px;
 
     background-color: var(--cor_secundario);
     border-radius: 0px 15px 15px 15px;
@@ -303,4 +304,80 @@ footer {
 
 footer p {
     color: var(--cor_texto_preto);
+}
+
+.card_prato {
+    width: 90%;
+    display: flex;
+    background-color: var(--cor_secundario);
+    margin: 10px auto;
+    border-radius: 8px;
+    max-width: 500px;
+    min-height: 103px;
+}
+
+.pratos_cardapio .conteiner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    padding: 20px 5px;
+}
+
+.imagem_prato {
+    width: 40%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.imagem_prato img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 0 0 7px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_prato h3 {
+    font-size: 13px;
+}
+
+.card_prato p {
+    font-size: 12px;
+    color: var(--cor_fundo);
+}
+
+.texto_card_prato {
+    padding: 0 15px;
+    width: 50%;
+}
+
+.filtro {
+    width: 90%;
+    margin: auto;
+}
+
+.filtro a {
+    color: var(--cor_fundo);
+    font-size: 14px;
+    background-color: var(--cor_secundario);
+    border-radius: 7px;
+    margin-left: 3px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.texto_cardapio h1 {
+    font-size: 22px;
+    margin: 0;
+    color: var(--cor_texto_preto);
+}
+
+.texto_cardapio .linha_titulo {
+    margin-bottom: 5px ;
+}
+
+.texto_cardapio {
+    width: 90%;
+    margin: auto;
 }
