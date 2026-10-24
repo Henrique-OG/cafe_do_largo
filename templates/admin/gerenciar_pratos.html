@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/imagem_logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_css/style_pc.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Gerenciar prato - Admin</title>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <header>
+        <div class="header_conteudo">
+
+            <div class="menu_header">
+                <div class="menu_mobile">
+                    <details class="menu-mobile">
+                        <summary aria-label="Abrir menu">
+                            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                        </summary>
+
+                        <nav class="nav_mobile" aria-label="Menu Principal">
+                            <a href="#">Voltar</a>
+                            <a href="{{url_for('admin.novo_prato')}}">Adicionar pratos</a>
+                            <a href="#">Adicionar fotos</a>
+                            <a href="{{url_for('admin.gerenciar_pratos')}}">Verificar pratos</a>
+                            <a href="#">Verificar galeria</a>
+                        </nav>
+                    </details>
+                </div>
+            </div>
+
+            <div class="imagem_header">
+                <img src="{{ url_for('static', filename='imagens/imagem_logo.png') }}" alt="Café do Largo – página inicial">
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="lista_de_pratos">
+            <div class="conteiner">
+                <div class="texto_lista_de_pratos">
+                    <h1>Lista de pratos</h1>
+                    <div class="linha_titulo"></div>
+                </div>
+                <div class="filtro">
+                    <a class="filtro_prato" href="{{url_for('admin.gerenciar_pratos', filtro='todos')}}">Todas</a>
+                    <a class="filtro_prato" href="{{url_for('admin.gerenciar_pratos', filtro='doces')}}">Doces</a>
+                    <a class="filtro_prato" href="{{url_for('admin.gerenciar_pratos', filtro='salgados')}}">Salgados</a>
+                    <a class="filtro_prato" href="{{url_for('admin.gerenciar_pratos', filtro='bebidas')}}">Bebidas</a>
+                </div>
+                <div class="pratos_lista">
+                    {% if pratos %}
+                        {% for prato in pratos %}
+                        <div class="campo_prato">
+                            <div class="imagem_campo_prato">
+                                {% if prato.imagem %}
+                                    <img src="{{ url_for('static', filename='imagens/pratos/' + prato.imagem) }}"
+                                        alt="{{prato.nome}}">
+                                {% endif %}
+                            </div>
+                            <div class="campo_prato_texto">
+                                {{prato.nome}}
+                                <div class="opcoes_campo_prato">
+                                    <a href="#" class="botao_editar_prato">Editar</a>
+                                    <form action="{{url_for('admin.excluir_prato', prato_id = prato.id)}}" method="POST" onsubmit="return confirm('tem certeza que deseja excluir este prato ?')">
+                                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                        <button class="excluir_prato" type="submit">Excluir</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>Nenhum prato encontrado</p>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

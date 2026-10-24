@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../static/imagens/imagem_logo.png" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_css/style_pc.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <title>Cadastrar prato - Admin</title>
     <meta name="robots" content="noindex">
@@ -22,9 +23,9 @@
 
                         <nav class="nav_mobile" aria-label="Menu Principal">
                             <a href="#">Voltar</a>
-                            <a href="#">Adicionar pratos</a>
+                            <a href="{{url_for('admin.novo_prato')}}">Adicionar pratos</a>
                             <a href="#">Adicionar fotos</a>
-                            <a href="#">Verificar pratos</a>
+                            <a href="{{url_for('admin.gerenciar_pratos')}}">Verificar pratos</a>
                             <a href="#">Verificar galeria</a>
                         </nav>
                     </details>

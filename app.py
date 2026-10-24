@@ -4,8 +4,10 @@ app = Flask(__name__)
 
 from config import Config
 from extensions import db
+from extensions import db, csrf
 app.config.from_object(Config)
 db.init_app(app)
+csrf.init_app(app)
 
 from models import *
 from public import public_bp

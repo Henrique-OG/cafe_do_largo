@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+:root {
+    --cor_fundo: #F5EBDD;
+    --cor_texto_preto: #000000; 
+    --cor_texto_branco: #FFFDF8;
+    --cor_secundario: #667052;
+    --marrom_caramelo: #B87945;
+    --botao_excluir: #991f1f; 
+}
+
+@media (min-width: 500px) {
+    .campo_prato {
+        width: 100%;
+    }
+
+    .pratos_lista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: 20px;
+    }
+}
