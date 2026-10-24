@@ -50,3 +50,18 @@ class PratoForm(FlaskForm):
     )
 
     enviar = SubmitField("Cadastrar prato")
+
+class EditarPratoForm(PratoForm):
+    imagem = FileField(
+        "Nova imagem do prato",
+        render_kw={"class": "colocar_imagem_forms"},
+        validators=[
+            Optional(),
+            FileAllowed(
+                ["jpg", "jpeg", "png", "webp"],
+                message="Envie apenas JPG, PNG ou WEBP."
+            ),
+        ],
+    )
+
+    enviar = SubmitField("Salvar alterações")

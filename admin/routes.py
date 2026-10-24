@@ -5,9 +5,11 @@ import uuid
 from flask import render_template, redirect, request, url_for, flash, current_app
 from werkzeug.utils import secure_filename
 
-from admin.forms import PratoForm
+from admin.forms import PratoForm, EditarPratoForm
 from extensions import db
 from models import Pratos
+from werkzeug.datastructures import FileStorage
+
 
 def salvar_imagem(arquivo):
     extensao = os.path.splitext(secure_filename(arquivo.filename))[1].lower()
@@ -58,6 +60,7 @@ def gerenciar_pratos():
 
 @admin_bp.route("/pratos/gerenciar/excluir/<int:prato_id>", methods=["POST"])
 def excluir_prato(prato_id):
+
     prato = db.get_or_404(Pratos, prato_id)
     nome_imagem = prato.imagem
 
@@ -76,3 +79,38 @@ def excluir_prato(prato_id):
             os.remove(caminho)
 
     return redirect(url_for('admin.gerenciar_pratos'))
+
+@admin_bp.route("/pratos/editar/<int:prato_id>", methods=["GET","POST"])
+def editar_prato(prato_id):
+    prato = db.get_or_404(Pratos, prato_id)
+    form = EditarPratoForm(obj=prato)
+
+    if form.validate_on_submit():
+        prato.nome = form.nome.data.strip()
+        prato.valor = form.valor.data
+        prato.sobre_prato = (form.sobre_prato.data or '').strip()
+        prato.classificacao = form.classificacao.data
+        arquivo = form.imagem.data
+
+        if isinstance(arquivo, FileStorage) and arquivo.filename:
+            nome_imagem_antiga = prato.imagem
+            caminho = os.path.join(current_app.static_folder, "imagens", "pratos", nome_imagem_antiga)
+            os.remove(caminho)
+
+            nome_arquivo = salvar_imagem(form.imagem.data)
+            prato.imagem = nome_arquivo
+        
+        db.session.commit()
+
+        flash("Prato atualizado com sucesso!")
+        return redirect(url_for("admin.gerenciar_pratos"))
+    return render_template("admin/editar_prato.html", form=form)
+
+@admin_bp.route("/pratos/alternar-disponibilidade/<int:prato_id>", methods=["POST"])
+def alternar_disponibilidade(prato_id):
+    prato = db.get_or_404(Pratos, prato_id)
+    prato.disponibilidade = not prato.disponibilidade
+    db.session.commit()
+    return redirect(url_for('admin.gerenciar_pratos'))
+
+    

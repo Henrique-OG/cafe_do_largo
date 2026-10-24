@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../static/imagens/imagem_logo.png" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_css/style_pc.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Editar prato - Admin</title>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <header>
+        <div class="header_conteudo">
+
+            <div class="menu_header">
+                <div class="menu_mobile">
+                    <details class="menu-mobile">
+                        <summary aria-label="Abrir menu">
+                            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                        </summary>
+
+                        <nav class="nav_mobile" aria-label="Menu Principal">
+                            <a href="#">Voltar</a>
+                            <a href="{{url_for('admin.novo_prato')}}">Adicionar pratos</a>
+                            <a href="#">Adicionar fotos</a>
+                            <a href="{{url_for('admin.gerenciar_pratos')}}">Verificar pratos</a>
+                            <a href="#">Verificar galeria</a>
+                        </nav>
+                    </details>
+                </div>
+            </div>
+
+            <div class="imagem_header">
+                <img src="{{ url_for('static', filename='imagens/imagem_logo.png') }}" alt="Café do largo">
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="cadastro_de_prato">
+            <div class="conteiner">
+                <div class="formulario">
+                    <h1>Editar prato</h1>
+                    <div class="linha"></div>
+
+                    {% with mensagens = get_flashed_messages() %}
+                        {% for mensagem in mensagens %}
+                            <p role="status">{{ mensagem }}</p>
+                        {% endfor %}
+                    {% endwith %}
+
+                    <form method="POST" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+
+                        <div>
+                            {{ form.nome.label }}
+                            {{ form.nome(maxlength=60) }}
+                            {% for erro in form.nome.errors %}<small>{{ erro }}</small>{% endfor %}
+                        </div>
+
+                        <div>
+                            {{ form.valor.label }}
+                            {{ form.valor(type="number", step="0.01", min="0.01") }}
+                            {% for erro in form.valor.errors %}<small>{{ erro }}</small>{% endfor %}
+                        </div>
+
+                        <div>
+                            {{ form.sobre_prato.label }}
+                            {{ form.sobre_prato(rows=4, maxlength=300) }}
+                            {% for erro in form.sobre_prato.errors %}<small>{{ erro }}</small>{% endfor %}
+                        </div>
+
+                        <div>
+                            {{ form.classificacao.label }}
+                            {{form.classificacao()}}
+                            {% for erro in form.classificacao.errors %}<small>{{ erro }}</small>{% endfor %}
+                        </div>
+
+                        <div>
+                            {{ form.imagem.label }}
+                            {{ form.imagem(accept="image/png, image/jpeg, image/webp")}}
+                            {% for erro in form.imagem.errors %}<small>{{ erro }}</small>{% endfor %}
+                        </div>
+
+                        {{ form.enviar(class_="botao_enviar") }}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

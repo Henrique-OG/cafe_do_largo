@@ -9,7 +9,7 @@
     --botao_excluir: #991f1f; 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
     .campo_prato {
         width: 100%;
     }
@@ -19,5 +19,12 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
         margin: 20px;
+    }
+
+    .opcoes_campo_prato {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px; 
     }
 }

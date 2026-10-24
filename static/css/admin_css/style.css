@@ -7,6 +7,7 @@
     --cor_secundario: #667052;
     --marrom_caramelo: #B87945;
     --botao_excluir: #991f1f; 
+    --botao_disponivel: #255c25;
 }
 
 body {
@@ -203,18 +204,21 @@ textarea {
 
 .opcoes_campo_prato {
     margin-top: 15px;
-    display: flex;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; 
 }
 
-.botao_editar_prato, .excluir_prato {
+.botao_editar_prato, .excluir_prato, .prato_indisponivel, .prato_disponivel {
     border: none;
     color: var(--cor_fundo);
     margin-top: 5px;
     text-decoration: none;
-    padding: 4px 15px;
+    padding: 4px 10px;
     font-size: 13px;
     border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .botao_editar_prato {
@@ -222,5 +226,13 @@ textarea {
 }
 
 .excluir_prato {
+    background-color: var(--botao_excluir);
+}
+
+.prato_disponivel {
+    background-color: var(--botao_disponivel);
+}
+
+.prato_indisponivel {
     background-color: var(--botao_excluir);
 }

@@ -65,11 +65,22 @@
                             <div class="campo_prato_texto">
                                 {{prato.nome}}
                                 <div class="opcoes_campo_prato">
-                                    <a href="#" class="botao_editar_prato">Editar</a>
+                                    <a href="{{ url_for('admin.editar_prato', prato_id = prato.id)}}" class="botao_editar_prato">Editar</a>
                                     <form action="{{url_for('admin.excluir_prato', prato_id = prato.id)}}" method="POST" onsubmit="return confirm('tem certeza que deseja excluir este prato ?')">
                                         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                                         <button class="excluir_prato" type="submit">Excluir</button>
                                     </form>
+                                    {% if prato.disponibilidade == True %}
+                                        <form action="{{url_for('admin.alternar_disponibilidade', prato_id = prato.id)}}" method="POST">
+                                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                            <button class="prato_disponivel" type="submit">Disponivel</button>
+                                        </form>
+                                    {% else %}
+                                        <form action="{{url_for('admin.alternar_disponibilidade', prato_id = prato.id)}}" method="POST">
+                                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                            <button class="prato_indisponivel" type="submit">Indisponivel</button>
+                                        </form>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
